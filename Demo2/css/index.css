@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+input {
+  outline: none;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+textarea,
+select,
+input,
+button {
+  font-size: 12px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+div {
+  display: block;
+}
+/* 轮播图区域素材 阴影效果素材导入 */
+.slider-wrap .shadow,
+.slider-wrap .shadowr,
+.slider-wrap .ban .btnl,
+.slider-wrap .ban .btnr,
+.slider-wrap .slider-dots .pg,
+.slider-wrap .slider-dots .select {
+  background: url(../img/banner.png) 0 9999px no-repeat;
+}
+/* 导航栏区域素材  logo 搜索符号的素材导入 */
+.h1-logo,
+.hot,
+.music-search-bg,
+.login,
+.cor {
+  background-image: url(../img/topbar.png);
+}
+/* 下载控件的位置 */
+.slider-wrap .download-app,
+.slider-wrap .download-btn {
+  background: url(../img/download.png) no-repeat 0 0;
+}
+
+.g-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.m-top {
+  position: relative;
+  z-index: 1000;
+  height: 70px;
+  width: auto;
+  box-sizing: border-box;
+  background: #242424;
+  border-bottom: 1px solid #000;
+}
+
+.m-top .wrap {
+  width: 1100px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.m-top .wrap .h1-logo {
+  float: left;
+  width: 176px;
+  height: 69px;
+  background-position: 0 0;
+  /* background-image: url(../img/topbar.png);*/
+}
+
+.m-top ul.nav-wrap {
+  float: left;
+}
+/* 设置导航列 */
+.m-top ul.nav-wrap li {
+  float: left; /*向左浮动*/
+  text-align: center;
+  line-height: 70px;
+  color: #ccc;
+}
+/* 使用padding把导航标签撑起来 免去宽度计算 同时间隔平均 */
+.m-top ul.nav-wrap li a,
+.m-top .nav li .cor {
+  text-decoration: none;
+  color: #ccc;
+  float: left;
+  height: 70px;
+  padding: 0 19px; /*利用padding把格子撑起来 不用weight来定义宽度 */
+  font-size: 14px;
+}
+/* 将指定的 a.z-slt标签家中选项 表示用户所选择的当前页面导航栏 */
+.m-top ul.nav-wrap li a.z-slt,
+.m-top ul.nav-wrap li a:hover {
+  background: #000;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hot {
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 100px;
+  width: 28px;
+  height: 19px;
+  background-position: -190px 0;
+}
+
+/* 顶部 搜索框 */
+.m-top .music-search {
+  float: right;
+  width: 158px;
+  height: 32px;
+}
+
+.m-top .music-search-bg {
+  float: right;
+  width: 158px;
+  height: 32px;
+  margin-top: 19px;
+  background-position: 0 -99px;
+  background-color: #fff;
+  border-radius: 32px;
+}
+
+.m-top .music-search .searchInput {
+  width: 95%;
+  background: transparent;
+  color: #333;
+  line-height: 16px;
+}
+
+.m-top .music-search .parent {
+  display: block;
+  position: relative;
+  margin: 8px 0 0 30px;
+}
+
+.m-top .music-search label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  color: #9b9b9b;
+  cursor: text;
+}
+
+.m-top .music-search label:focus {
+  display: none;
+}
+/* 创作者 */
+.m-top a.creator {
+  float: right;
+  width: 90px;
+  height: 32px;
+  margin: 19px 0 0 12px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  border: 1px solid #4f4f4f;
+  background-position: 0 -140px;
+  line-height: 33px;
+  color: #ccc;
+  border-radius: 20px;
+}
+
+.m-top a.creator:hover {
+  border: 1px solid #ccc;
+}
+
+.loginBtn {
+  float: right;
+  height: 45px;
+  margin: 19px 0 0 20px;
+  padding: 0 22px 0 0;
+  background-position: right -47px;
+  background-image: none;
+}
+
+.m-top .loginBtn a.login {
+  display: block;
+  width: 28px;
+  margin-top: 7px;
+  color: #787878;
+}
+.m-top .loginBtn a.login:hover {
+  display: block;
+  width: 28px;
+  margin-top: 7px;
+  color: #666;
+}
+
+.m-subnav {
+  height: 35px;
+  box-sizing: border-box;
+  background-color: #c20c0c;
+  border-bottom: 1px solid #a40011;
+}
+
+.m-subnav .wrap {
+  width: 1100px;
+  height: 34px;
+  margin: 0 auto;
+}
+
+.m-subnav .nav {
+  float: left;
+  padding-left: 180px;
+}
+
+.m-subnav .nav li,
+.m-subnav .nav a {
+  float: left;
+  height: 34px;
+  text-align: center;
+}
+
+.m-subnav .nav a {
+  color: #fff;
+  text-decoration: none;
+
+  display: inline-block;
+  height: 20px;
+  padding: 0 13px;
+  margin: 7px 17px 0;
+  border-radius: 20px;
+  line-height: 21px;
+
+  font-style: normal;
+  text-align: left;
+  font-size: inherit;
+}
+
+.m-subnav .nav a:hover,
+.m-subnav .nav .cls {
+  background: #9b0909;
+}
+
+.m-top .nav-wrap .cor {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 64px;
+  width: 12px;
+  height: 7px;
+  margin-left: -6px;
+  overflow: hidden;
+  background-position: -226px 0;
+}
+
+/* 轮播区域 */
+.slider-wrap {
+  width: auto;
+  height: 285px;
+  background-image: url("http://p1.music.126.net/efa3SJ9z3cWyNeQl4avqiQ==/109951168447329613.jpg?imageView&blur=40x20");
+  background-size: 6000px;
+  background-position: center center;
+}
+
+/* 轮播栏容器大小 */
+.slider-wrap .wrap {
+  position: relative;
+  width: 982px;
+  height: 285px;
+  margin: 0 auto;
+}
+/* 轮播区域大小 */
+.slider-wrap .ban {
+  width: 982px;
+  height: 285px;
+}
+
+/* 轮播区域大小 */
+.slider-wrap .ban-img {
+  width: 100%;
+  height: 285px;
+  overflow: hidden;
+}
+.slider-wrap .ban-img .a-img {
+  display: block;
+  width: auto;
+  height: 285px;
+}
+
+/* 轮播图区域 图片大小 */
+.slider-wrap .ban-img img {
+  display: block;
+  position: absolute;
+  width: 730px;
+  height: 285px;
+  opacity: 0.2;
+}
+
+/* 图片激活
+.slider-wrap .ban-img img.on {
+  transition: opacity 0.8s;
+  opacity: 1;
+} */
+
+/* 轮播区域 下载容器大小 */
+.slider-wrap .download-app {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  right: -1px;
+  width: 254px;
+  height: 285px;
+}
+
+/* 轮播区域 下载图片 */
+.slider-wrap .download-app .download-btn {
+  display: block;
+  width: 215px;
+  height: 56px;
+  margin: 186px 0 0 19px;
+  background-position: 0 9999px;
+  text-indent: -9999px;
+}
+
+.slider-wrap .download-app .download-btn:hover {
+  text-decoration: none;
+  background-position: 0 -290px;
+}
+
+/* 下载栏字体样式修改 */
+.slider-wrap .download-app p {
+  margin: 10px auto;
+  text-align: center;
+  color: #8d8d8d;
+}
+
+/* 下载栏 背景阴影效果 */
+.slider-wrap .download-app .shadow,
+.slider-wrap .download-app .shadowr {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 285px;
+  background-position: -1px 0;
+}
+
+.slider-wrap .download-app .shadowr {
+  left: auto;
+  right: -20px;
+  background-position: -20px 0;
+}
+
+/* 调用轮播图 箭头素材 */
+.slider-wrap .ban .btnl,
+.slider-wrap .ban .btnr {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+  width: 37px;
+  height: 63px;
+  text-indent: -9999px;
+}
+
+/* 轮播图的箭头指向 */
+.slider-wrap .ban .btnl {
+  left: -68px;
+  background-position: 0 -360px;
+}
+.slider-wrap .ban .btnl:hover {
+  background-position: 0 -430px;
+}
+
+.slider-wrap .ban .btnr {
+  right: -68px;
+  background-position: 0 -508px;
+}
+.slider-wrap .ban .btnr:hover {
+  background-position: 0 -578px;
+}
+
+.slider-wrap .ban .slider-dots {
+  position: absolute;
+  top: 259px;
+  left: 0;
+  width: 730px;
+  height: 20px;
+  text-align: center;
+}
+
+.slider-wrap .slider-dots .pg {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: 3px -343px;
+}
+
+.slider-wrap .slider-dots .active {
+  background-position: -16px -343px;
+}
